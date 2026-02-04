@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.490s</div>
+<div class="counter">2.100s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,12 +79,12 @@
 </thead>
 <tr>
 <td class="success">findsOrdersByCustomerId()</td>
-<td class="success">0.281s</td>
+<td class="success">0.611s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">savesAndLoadsOrderWithLines()</td>
-<td class="success">2.209s</td>
+<td class="success">1.489s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,8 +92,8 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>07:45:51.192 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.management.infrastructure.persistence.JpaOrderRepositoryTest]: JpaOrderRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-07:45:51.513 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.management.ManagementApplication for test class com.example.management.infrastructure.persistence.JpaOrderRepositoryTest
+<pre>07:49:34.621 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.management.infrastructure.persistence.JpaOrderRepositoryTest]: JpaOrderRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:49:28.670 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.management.ManagementApplication for test class com.example.management.infrastructure.persistence.JpaOrderRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -103,18 +103,18 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-02-04T07:45:52.693-05:00  INFO 61137 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Starting JpaOrderRepositoryTest using Java 17.0.18 with PID 61137 (started by root in /root/agent_code_generator/workspaces/order_management_workspace/order-management_v5)
-2026-02-04T07:45:52.698-05:00  INFO 61137 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-04T07:45:53.765-05:00  INFO 61137 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-04T07:45:53.891-05:00  INFO 61137 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
-2026-02-04T07:45:54.885-05:00  INFO 61137 --- [management] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-04T07:45:55.004-05:00  INFO 61137 --- [management] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-02-04T07:45:55.194-05:00  INFO 61137 --- [management] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-02-04T07:45:55.965-05:00  INFO 61137 --- [management] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-04T07:45:56.016-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-04T07:45:56.369-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:managementdb user=SA
-2026-02-04T07:45:56.374-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-04T07:46:01.371-05:00  INFO 61137 --- [management] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-04T07:49:29.541-05:00  INFO 63446 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Starting JpaOrderRepositoryTest using Java 17.0.18 with PID 63446 (started by root in /root/agent_code_generator/workspaces/order_management_workspace/order-management_v5)
+2026-02-04T07:49:29.544-05:00  INFO 63446 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-04T07:49:30.693-05:00  INFO 63446 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-04T07:49:30.785-05:00  INFO 63446 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2026-02-04T07:49:31.582-05:00  INFO 63446 --- [management] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-04T07:49:31.656-05:00  INFO 63446 --- [management] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-04T07:49:31.708-05:00  INFO 63446 --- [management] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-04T07:49:32.060-05:00  INFO 63446 --- [management] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-04T07:49:32.118-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-04T07:49:32.647-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:managementdb user=SA
+2026-02-04T07:49:32.652-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-04T07:49:33.947-05:00  INFO 63446 --- [management] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     create table order_lines (
         order_id varchar(255) not null,
@@ -134,9 +134,9 @@ Hibernate:
        add constraint FK1smc0s578t2oih21yn9hw6usr 
        foreign key (order_id) 
        references orders
-2026-02-04T07:46:01.595-05:00  INFO 61137 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-04T07:46:03.107-05:00  WARN 61137 --- [management] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-04T07:46:03.932-05:00  INFO 61137 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Started JpaOrderRepositoryTest in 12.002 seconds (process running for 17.118)
+2026-02-04T07:49:34.079-05:00  INFO 63446 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04T07:49:34.961-05:00  WARN 63446 --- [management] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-04T07:49:35.668-05:00  INFO 63446 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Started JpaOrderRepositoryTest in 6.633 seconds (process running for 9.731)
 Hibernate: 
     select
         oe1_0.id,
@@ -190,9 +190,9 @@ Hibernate:
             on oe1_0.id=l1_0.order_id 
     where
         oe1_0.id=?
-2026-02-04T07:46:06.167-05:00  INFO 61137 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-04T07:46:06.176-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-02-04T07:46:06.183-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-04T07:49:37.171-05:00  INFO 63446 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04T07:49:37.176-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-04T07:49:37.188-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -202,20 +202,20 @@ Hibernate:
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-02-04T07:46:06.256-05:00  INFO 61137 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Starting JpaOrderRepositoryTest using Java 17.0.18 with PID 61137 (started by root in /root/agent_code_generator/workspaces/order_management_workspace/order-management_v5)
-2026-02-04T07:46:06.257-05:00  INFO 61137 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-04T07:46:06.638-05:00  INFO 61137 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-04T07:46:06.657-05:00  INFO 61137 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
-2026-02-04T07:46:06.982-05:00  INFO 61137 --- [management] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-04T07:46:06.991-05:00  INFO 61137 --- [management] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-02-04T07:46:06.999-05:00  INFO 61137 --- [management] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-04T07:46:07.002-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-02-04T07:46:12.801-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:managementdb user=SA
-2026-02-04T07:46:12.802-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-02-04T07:46:06.836-05:00  INFO 61137 --- [management] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-04T07:46:06.862-05:00  INFO 61137 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-04T07:46:07.139-05:00  WARN 61137 --- [management] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-04T07:46:07.466-05:00  INFO 61137 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Started JpaOrderRepositoryTest in 1.272 seconds (process running for 21.021)
+2026-02-04T07:49:37.335-05:00  INFO 63446 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Starting JpaOrderRepositoryTest using Java 17.0.18 with PID 63446 (started by root in /root/agent_code_generator/workspaces/order_management_workspace/order-management_v5)
+2026-02-04T07:49:37.335-05:00  INFO 63446 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-04T07:49:37.910-05:00  INFO 63446 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-04T07:49:37.928-05:00  INFO 63446 --- [management] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2026-02-04T07:49:38.120-05:00  INFO 63446 --- [management] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-04T07:49:38.126-05:00  INFO 63446 --- [management] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-04T07:49:38.139-05:00  INFO 63446 --- [management] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-04T07:49:38.141-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-02-04T07:49:38.145-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:managementdb user=SA
+2026-02-04T07:49:38.148-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-02-04T07:49:38.222-05:00  INFO 63446 --- [management] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-04T07:49:38.248-05:00  INFO 63446 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04T07:49:38.430-05:00  WARN 63446 --- [management] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-04T07:49:38.824-05:00  INFO 63446 --- [management] [    Test worker] c.e.m.i.p.JpaOrderRepositoryTest         : Started JpaOrderRepositoryTest in 1.626 seconds (process running for 12.887)
 Hibernate: 
     select
         oe1_0.id,
@@ -334,9 +334,9 @@ Hibernate:
         order_lines l1_0 
     where
         l1_0.order_id=?
-2026-02-04T07:46:07.746-05:00  INFO 61137 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-04T07:46:07.748-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2026-02-04T07:46:07.751-05:00  INFO 61137 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-02-04T07:49:38.924-05:00  INFO 63446 --- [management] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04T07:49:38.927-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-02-04T07:49:38.937-05:00  INFO 63446 --- [management] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
 </pre>
 </span>
 </div>
@@ -348,7 +348,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Feb 4, 2026, 7:46:14 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Feb 4, 2026, 7:49:39 AM</p>
 </div>
 </div>
 </body>

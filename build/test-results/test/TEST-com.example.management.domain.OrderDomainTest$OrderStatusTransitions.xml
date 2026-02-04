@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-02-04T12:45:50.458Z" hostname="RubenS" time="0.111">
+<testsuite name="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-02-04T12:49:28.425Z" hostname="RubenS" time="0.057">
   <properties/>
-  <testcase name="defaultStatusIsCreated()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.08"/>
-  <testcase name="cannotChangeStatusAfterCancellation()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.006"/>
+  <testcase name="defaultStatusIsCreated()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.033"/>
+  <testcase name="cannotChangeStatusAfterCancellation()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.005"/>
   <testcase name="createdToPaidToShippedIsAllowed()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.002"/>
-  <testcase name="cannotShipBeforePaying()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.004"/>
+  <testcase name="cannotShipBeforePaying()" classname="com.example.management.domain.OrderDomainTest$OrderStatusTransitions" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

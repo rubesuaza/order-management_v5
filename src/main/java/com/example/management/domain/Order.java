@@ -27,7 +27,9 @@ public final class Order {
         if (customerId == null || customerId.isBlank()) {
             throw new IllegalArgumentException("customerId must not be null or blank");
         }
-        Objects.requireNonNull(lines, "lines must not be null");
+        if (lines == null) {
+            throw new IllegalArgumentException("lines must not be null");
+        }
         if (lines.isEmpty()) {
             throw new IllegalArgumentException("Order must contain at least one line");
         }
