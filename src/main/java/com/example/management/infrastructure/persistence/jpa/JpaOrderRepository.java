@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Repository
 public class JpaOrderRepository implements OrderRepository {
@@ -35,13 +34,13 @@ public class JpaOrderRepository implements OrderRepository {
         return jpaRepository.findByCustomerId(customerId)
                 .stream()
                 .map(this::toDomain)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     private OrderEntity toEntity(Order order) {
         List<OrderLineEmbeddable> lineEmbeddables = order.getLines().stream()
                 .map(this::toEmbeddable)
-                .collect(Collectors.toList());
+                .toList();
 
         return new OrderEntity(order.getId(), order.getCustomerId(), order.getStatus(), lineEmbeddables);
     }
@@ -53,7 +52,7 @@ public class JpaOrderRepository implements OrderRepository {
     private Order toDomain(OrderEntity entity) {
         List<OrderLine> lines = entity.getLines().stream()
                 .map(this::toDomainLine)
-                .collect(Collectors.toList());
+                .toList();
 
         // Creamos la orden usando la fábrica de dominio y luego sincronizamos el estado
         Order order = Order.create(entity.getId(), entity.getCustomerId(), lines);
