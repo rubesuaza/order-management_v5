@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z2pxUD+7vtE=",
+  "success": false,
+  "projectFilePath": "/root/agent_code_generator/workspaces/order_management_net/order-management_v5/src/OrderManagement.Infrastructure/OrderManagement.Infrastructure.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1008",
+      "level": "Error",
+      "message": "Projects that use central package version management should not define the version on the PackageReference items but on the PackageVersion items: Microsoft.AspNetCore.OpenApi;Swashbuckle.AspNetCore."
+    }
+  ]
+}
