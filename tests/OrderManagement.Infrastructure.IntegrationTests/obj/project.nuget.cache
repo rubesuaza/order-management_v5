@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+L/RYZrhwI4=",
+  "dgSpecHash": "tGSxSPgSwts=",
   "success": true,
   "projectFilePath": "/root/agent_code_generator/workspaces/order_management_net/order-management_v5/tests/OrderManagement.Infrastructure.IntegrationTests/OrderManagement.Infrastructure.IntegrationTests.csproj",
   "expectedPackageFiles": [

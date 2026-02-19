@@ -109,4 +109,43 @@ public class OrderTests
         act.Should().Throw<InvalidOrderStateException>()
             .WithMessage("*PAID*");
     }
+
+    [Fact]
+    public void MarkAsPaid_FromPaid_ThrowsInvalidOrderStateException()
+    {
+        var items = new[] { OrderItem.Create("X", 1, Money.Usd(10m)) };
+        var order = Order.Create(items);
+        order.MarkAsPaid();
+
+        var act = () => order.MarkAsPaid();
+
+        act.Should().Throw<InvalidOrderStateException>()
+            .WithMessage("*Cannot mark as paid*");
+    }
+
+    [Fact]
+    public void Reconstitute_ReturnsOrder_WithGivenIdAndStatus()
+    {
+        var id = Guid.NewGuid();
+        var customerId = Guid.NewGuid();
+        var items = new[] { OrderItem.Create("P", 1, Money.Usd(15m)) };
+        var order = Order.Reconstitute(id, customerId, Domain.Enums.OrderStatus.Paid, items);
+
+        order.Id.Should().Be(id);
+        order.CustomerId.Should().Be(customerId);
+        order.Status.Should().Be(Domain.Enums.OrderStatus.Paid);
+        order.TotalAmount.Amount.Should().Be(15m);
+    }
+
+    [Fact]
+    public void SetShippingAddress_SetsAddress()
+    {
+        var items = new[] { OrderItem.Create("X", 1, Money.Usd(10m)) };
+        var order = Order.Create(items);
+        var address = new Address("123 Main St", "City", "12345", "US");
+
+        order.SetShippingAddress(address);
+
+        order.ShippingAddress.Should().Be(address);
+    }
 }

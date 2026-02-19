@@ -47,8 +47,10 @@
             "coverlet.collector": "6.0.0",
             "FluentAssertions": "6.12.0",
             "Microsoft.AspNetCore.Mvc.Testing": "8.0.0",
+            "Microsoft.AspNetCore.OpenApi": "8.0.14",
             "Microsoft.NET.Test.Sdk": "17.8.0",
             "NSubstitute": "5.1.0",
+            "Swashbuckle.AspNetCore": "6.6.2",
             "xunit": "2.5.3",
             "xunit.runner.visualstudio": "2.5.3"
           },
