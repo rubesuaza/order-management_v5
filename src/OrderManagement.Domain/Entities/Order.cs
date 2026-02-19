@@ -10,6 +10,7 @@ namespace OrderManagement.Domain.Entities;
 public class Order
 {
     public Guid Id { get; private set; }
+    public Guid CustomerId { get; private set; }
     public OrderStatus Status { get; private set; }
     private readonly List<OrderItem> _items = new();
     public IReadOnlyList<OrderItem> Items => _items.AsReadOnly();
@@ -17,7 +18,9 @@ public class Order
 
     private Order() { }
 
-    public static Order Create(IReadOnlyList<OrderItem> items)
+    public static Order Create(IReadOnlyList<OrderItem> items) => Create(Guid.Empty, items);
+
+    public static Order Create(Guid customerId, IReadOnlyList<OrderItem> items)
     {
         if (items == null || items.Count == 0)
             throw new InvalidOrderStateException("Order must contain at least one item.");
@@ -25,7 +28,24 @@ public class Order
         var order = new Order
         {
             Id = Guid.NewGuid(),
+            CustomerId = customerId,
             Status = OrderStatus.Pending
+        };
+        foreach (var item in items)
+            order._items.Add(item);
+        return order;
+    }
+
+    /// <summary>
+    /// Reconstitutes an order from persistence. Used by infrastructure mappers.
+    /// </summary>
+    public static Order Reconstitute(Guid id, Guid customerId, OrderStatus status, IReadOnlyList<OrderItem> items)
+    {
+        var order = new Order
+        {
+            Id = id,
+            CustomerId = customerId,
+            Status = status
         };
         foreach (var item in items)
             order._items.Add(item);
