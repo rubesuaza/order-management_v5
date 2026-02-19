@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "structure_compliance": {
+    "score": 100,
+    "missing_files": [],
+    "notes": "No existe directory_structure.md en architecture/; se verificó la estructura del workspace. Proyecto .NET con capas: src (OrderManagement.Domain, OrderManagement.Application, OrderManagement.Infrastructure), tests (Domain.UnitTests, Application.UnitTests, Infrastructure.IntegrationTests). Estructura hexagonal/clean presente."
+  },
+  "domain_compliance": {
+    "score": 100,
+    "missing_entities": [],
+    "notes": "No existe domain_definition.md en architecture/; se revisaron entidades y value objects. Order (Id, CustomerId, Status, Items, ShippingAddress, TotalAmount) con regla mínimo un ítem y mínimo 10 USD para MarkAsPaid. OrderItem (ProductName, Quantity, UnitPrice, LineTotal) con validación quantity > 0 y unitPrice >= 0. Value objects Money (Amount, Currency, Add, Subtract, Multiply) y Address (Street, City, PostalCode, Country). OrderStatus: Pending, Paid, Shipped, Cancelled. Puertos IOrderRepository e IPaymentGateway presentes."
+  },
+  "test_results": {
+    "command_executed": "dotnet test",
+    "passed": true,
+    "total_tests": 25,
+    "failures": 0,
+    "output_summary": "Build succeeded. Domain.UnitTests: 22 passed; Application.UnitTests: 2 passed; Infrastructure.IntegrationTests: 1 passed."
+  },
+  "gaps": [],
+  "next_recommended_action": "git_operations"
+}

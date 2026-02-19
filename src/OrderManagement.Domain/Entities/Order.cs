@@ -9,6 +9,8 @@ namespace OrderManagement.Domain.Entities;
 /// </summary>
 public class Order
 {
+    private const decimal MinimumOrderAmountForPayment = 10.00m;
+
     public Guid Id { get; private set; }
     public Guid CustomerId { get; private set; }
     public OrderStatus Status { get; private set; }
@@ -31,8 +33,7 @@ public class Order
             CustomerId = customerId,
             Status = OrderStatus.Pending
         };
-        foreach (var item in items)
-            order._items.Add(item);
+        order._items.AddRange(items);
         return order;
     }
 
@@ -47,8 +48,7 @@ public class Order
             CustomerId = customerId,
             Status = status
         };
-        foreach (var item in items)
-            order._items.Add(item);
+        order._items.AddRange(items);
         return order;
     }
 
@@ -65,9 +65,8 @@ public class Order
     {
         if (Status != OrderStatus.Pending)
             throw new InvalidOrderStateException($"Cannot mark as paid from status {Status}.");
-        var min = Money.Usd(10.00m);
-        if (TotalAmount.Amount < 10.00m)
-            throw new InvalidOrderStateException("Order must meet minimum value of 10.00 USD before transitioning to PAID.");
+        if (TotalAmount.Amount < MinimumOrderAmountForPayment)
+            throw new InvalidOrderStateException($"Order must meet minimum value of {MinimumOrderAmountForPayment} USD before transitioning to PAID.");
         Status = OrderStatus.Paid;
     }
 
@@ -80,10 +79,12 @@ public class Order
 
     public void Cancel()
     {
-        if (Status != OrderStatus.Pending && Status != OrderStatus.Paid)
+        if (!IsInCancellableState())
             throw new InvalidOrderStateException("CANCELLED is only possible from PENDING or PAID.");
         Status = OrderStatus.Cancelled;
     }
+
+    private bool IsInCancellableState() => Status == OrderStatus.Pending || Status == OrderStatus.Paid;
 
     public void SetShippingAddress(Address address) => ShippingAddress = address;
 }
